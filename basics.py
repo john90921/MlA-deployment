@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 import pickle
-model = pickle.load(open('modelv2.pkl', 'rb'))
 import numpy as np
 
 app = Flask(__name__)
+model = pickle.load(open('modelv2.pkl', 'rb'))
 
 @app.route("/")
 def hello():
