@@ -1,0 +1,12 @@
+# Exported from Render on 2025-07-15T07:56:17Z
+services:
+- type: web
+  name: MlA-deployment-5
+  runtime: python
+  repo: https://github.com/john90921/MlA-deployment
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app.py
+  autoDeployTrigger: commit
+version: "1"
